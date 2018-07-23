@@ -36,21 +36,14 @@
     </h3>
     
     <ul id="leader-board">
+      
+      {% for score in scores %}
       <li class="leader-board-user">
         <p class="leader-board-user-title">
-          Amy Pavel
+          {{ score.user_set.all.username }}
         </p>
       </li>
-      <li class="leader-board-user">
-        <p class="leader-board-user-title">
-          Amy Pavel
-        </p>
-      </li>
-      <li class="leader-board-user">
-        <p class="leader-board-user-title">
-          Amy Pavel
-        </p>
-      </li>
+      {% endfor %}
     </ul>
 
 

@@ -13,15 +13,16 @@ def main(request):
   
 def game(request):
     roomid = request.GET['roomid']
-    exists = MiniGame.objects.filter(name=roomid)
+    game = MiniGame.objects.filter(name=roomid)
     
-    if not exists:
+    if not game:
       new_game = MiniGame(name=roomid)
       new_game.save()
-      
-      
     request.session['roomid'] = roomid
-    return render(request, 'life/game.html', {"username": request.session['username'], "roomid": request.session['roomid']})
+    
+    scores = Score.objects.filter(game=game[0]).values()
+#     print(scores)
+    return render(request, 'life/game.html', {"username": request.session['username'], "roomid": request.session['roomid'], "scores": scores})
   
 def score(request):
     heart_rate = int(request.GET["heartRate"])
@@ -36,7 +37,6 @@ def score(request):
     score = Score.objects.filter(user=user, game=minigame)
     
     if not score:
-#       print('new score')
       new_score = Score(user=user, game=minigame, heart_rate=heart_rate, distance=miles, score=heart_rate*miles)
       new_score.save()
     else:
@@ -46,7 +46,7 @@ def score(request):
       score.score = int(heart_rate) * float(miles)
       score.save()
    
-    return JsonResponse({score: heart_rate*miles})
+    return JsonResponse({'score': heart_rate*miles})
     
     
 
