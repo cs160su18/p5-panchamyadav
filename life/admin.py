@@ -3,3 +3,4 @@ from life.models import *
 
 # Register your models here.
 admin.site.register(Group)
+admin.site.register(User)

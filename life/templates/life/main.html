@@ -4,7 +4,7 @@
 
 <html>
 	<head>
-		<title>Home</title>
+		<title></title>
 
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="{% static '/life/vendors/bootstrap/css/bootstrap.css' %}" />
@@ -12,8 +12,24 @@
 
 		<script src="{% static '/life/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
 		<script src="{% static '/life/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
+    <script src="{% static '/life/javascripts/main.js' %}"></script>
+
 	</head>
 	<body>
-		
+	  <h1>
+      Hi, {{ username }}!
+    </h1>
+    <hr>
+    <h3>
+      Choose Minigames
+    </h3>
+    
+    <div class='minigame-image'>
+      <img src="{% static '/life/assets/heart-icon.png' %}"/>
+    </div>
+    
+   <input type="text" id="gameroom-input" placeholder="Game Room" class="login-input">
+   <button id="play-btn" type="button" class="btn btn-success rounded-button">Let's Play</button>
+
 	</body>
 </html>

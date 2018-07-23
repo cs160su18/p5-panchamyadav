@@ -56,16 +56,109 @@
 	float: right;
 }
 
+/* CUSTOM P5 Tim/Pancham */
+.rounded-button {
+  border-radius: 25rem;
+  width: 60vw;
+  height: 5vh;
+  font-size: 3vh;
+}
+
+.leader-board {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leader-board-user-title {
+  align-self: center;
+  font-size: 1.5vh;
+  margin: 0;
+}
+
+.leader-board-user {
+  margin: auto;
+  margin-bottom: 1vh;
+  width: 40vw;
+  height: 3vh;
+  font-size: 0.5rem;
+  border-radius: 25rem;
+  border-width: 0.1rem;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-input {
+  margin-left: 2vw;
+  text-align: center;
+  font-size: 2.5vh;
+  width: 20vw;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: solid;
+  border-bottom-color: black;
+  border-bottom-width: 0.08vh;
+}
+
+.game-btn {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2.5vh;
+}
+
+.login-input {
+  margin: auto;
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 2.5rem;
+  width: 75%;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: solid;
+  border-bottom-color: black;
+  border-bottom-width: 0.08vh;
+}
+
+.login-btn {
+  width: 25%;
+  margin-top: 7.5rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  font-size: 2.5rem;
+  border-radius: 2.5rem;
+}
+
+.login {
+  margin-top: 2rem;
+  padding: 0rem;
+}
+
+.minigame-image {
+  margin: 2rem;
+}
+
+#gameroom-input {
+  margin: 0;
+  margin: 1rem;
+}
+
 
 /* GENERAL CLASS CSS */
 
 body {
+  margin-top: 5rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   font-family: "Fira Sans", sans-serif;
   color: #0d124a;
   background-color: #fafafa;
-
+  text-align: center
 }
 
 b, strong {
@@ -82,15 +175,15 @@ h1,h2,h3,h4,h5,h6 {
 
 
 h1, .h1 {
-  font-size: 2.5rem;
+  font-size: 4.0rem;
 }
 
 h2, .h2 {
-  font-size: 2rem;
+  font-size: 3.25rem;
 }
 
 h3, .h3 {
-  font-size: 1.75rem;
+  font-size: 2.5rem;
 }
 
 h4, .h4 {
@@ -110,6 +203,11 @@ h6, .h6 {
 a, a:hover {
   color: #037edc;
 }
+
+li {
+  margin: 100vh;
+}
+
 
 /* TABLES */
 

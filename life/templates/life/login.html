@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title></title>
+
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{% static '/life/vendors/bootstrap/css/bootstrap.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static '/life/css/main.css' %}" />
+
+		<script src="{% static '/life/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
+		<script src="{% static '/life/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
+    <script src="{% static '/life/javascripts/login.js' %}"></script>
+
+	</head>
+	<body>
+    <h1>
+      Cloud 9 Workout
+    </h1>
+    
+    <div class="login">
+      <input type="text" id="username" placeholder="Username" class="login-input">
+      <input type="password" id="password" name="Miles" placeholder="Password" class="login-input">
+      <button id="login" type="button" class="btn btn-success login-btn">Login</button>
+      <button id="signup" type="button" class="btn btn-success login-btn">Sign up</button>
+    </div>
+
+
+	</body>
+</html>
