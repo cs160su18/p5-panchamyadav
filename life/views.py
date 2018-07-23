@@ -18,11 +18,13 @@ def game(request):
     if not game:
       new_game = MiniGame(name=roomid)
       new_game.save()
-    request.session['roomid'] = roomid
+      game = MiniGame.objects.filter(name=roomid)
     
+    request.session['roomid'] = roomid
     scores = Score.objects.filter(game=game[0]).values()
-#     print(scores)
-    return render(request, 'life/game.html', {"username": request.session['username'], "roomid": request.session['roomid'], "scores": scores})
+    scores_template = [{'username': User.objects.get(id = score['user_id']).username, 'heart_rate': score['heart_rate'],'distance': score['distance'], 'score': score['score']} for score in scores]
+    scores_template = sorted(scores_template, key=lambda x: x['score'], reverse=True)
+    return render(request, 'life/game.html', {"username": request.session['username'], "roomid": request.session['roomid'], "scores": scores_template})
   
 def score(request):
     heart_rate = int(request.GET["heartRate"])

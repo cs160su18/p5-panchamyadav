@@ -40,7 +40,9 @@
       {% for score in scores %}
       <li class="leader-board-user">
         <p class="leader-board-user-title">
-          {{ score.user_set.all.username }}
+          {{ score.username }}
+          | Score
+          {{ score.score }}
         </p>
       </li>
       {% endfor %}
